@@ -6,18 +6,22 @@ function Navbar() {
 
     return (
         <nav className="navbar">
-            <Link to="/blog" >Blog</Link>
+            <div className="navbar-left">
+                <Link to="/blog" >Blog</Link>
+            </div>
 
-            {isAuth ? (
-                <>
-                    <Link to="/admin">Admin</Link>
-                    <button onClick={logout} >
-                        Log Out
-                    </button>
-                </>
-            ) : (
-                <Link to="/login" >Log In</Link>
-            )}
+            <div className="navbar-right">
+                {isAuth ? (
+                    <>
+                        <Link to="/admin">Admin</Link>
+                        <button onClick={logout} >
+                            Log Out
+                        </button>
+                    </>
+                ) : (
+                    <Link to="/login" >Log In</Link>
+                )}
+            </div>
         </nav>
     );
 }
