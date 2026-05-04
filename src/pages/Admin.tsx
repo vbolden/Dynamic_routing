@@ -1,11 +1,12 @@
 function Admin() {
     return (
-        <div>
-            <h2>Admin Dashboard</h2>
-
-            <p>
-                Welcome to the Admin Dashboard.
-            </p>
+        <div className="auth-page">
+            <div className="auth-card">
+                <h2>Admin Dashboard</h2>
+                <p>
+                    Welcome to the Admin Dashboard.
+                </p>
+            </div>
         </div>
     )
 }
