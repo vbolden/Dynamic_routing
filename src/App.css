@@ -86,3 +86,32 @@ button {
     margin-top: 1rem;
     line-height: 1.6;
 }
+
+/* AUTH/LOGIN PAGE STYLES */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.auth-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-card h2 {
+    margin-bottom: 1rem;
+}
+
+.auth-card button {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
