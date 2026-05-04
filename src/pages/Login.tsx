@@ -12,12 +12,13 @@ function Login() {
     }
 
     return (
-        <div>
-            <h2>Login Page</h2>
-
-            <button onClick={handleLogin} >
-                Log In
-            </button>
+        <div className="auth-page">
+            <div className="auth-card">
+                <h2>Login Page</h2>
+                <button onClick={handleLogin} >
+                    Log In
+                </button>
+            </div>
         </div>
     )
 }
