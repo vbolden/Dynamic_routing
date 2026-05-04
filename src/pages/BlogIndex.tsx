@@ -1,4 +1,5 @@
 import { posts } from "../library/posts";
+import { Link } from "react-router-dom";
 
 function BlogIndex() {
     return (
@@ -8,7 +9,7 @@ function BlogIndex() {
             <ul>
                 {posts.map((post) => (
                     <li key={post.id} >
-                        {post.title}
+                        <Link to={`/blog/${post.slug}`}>{post.title}</Link>
                     </li>
                 ))}
             </ul>
