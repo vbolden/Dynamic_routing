@@ -6,8 +6,20 @@ function Login() {
     const navigate = useNavigate();
 
     function handleLogin() {
-        
+        login();
+
+        navigate("/admin");
     }
+
+    return (
+        <div>
+            <h2>Login Page</h2>
+
+            <button onClick={handleLogin} >
+                Log In
+            </button>
+        </div>
+    )
 }
 
 export default Login;
