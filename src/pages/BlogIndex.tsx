@@ -3,16 +3,21 @@ import { Link } from "react-router-dom";
 
 function BlogIndex() {
     return (
-        <div>
+        <div className="page">
             <h1>Blog Posts</h1>
 
-            <ul>
+            <div className="posts-container">
                 {posts.map((post) => (
-                    <li key={post.id} >
-                        <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-                    </li>
+                    <Link 
+                    to={`/blog/${post.slug}`}
+                    key={post.id}
+                    className="post-card" 
+                    >
+                        <h2>{post.title}</h2>
+                        <p>Click to read more...</p>
+                    </Link>
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }
