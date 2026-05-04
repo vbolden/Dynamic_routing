@@ -3,22 +3,28 @@ import { posts } from "../library/posts";
 
 function BlogPost() {
     // DESTRUCTURE TO PULL SLUG VALUE FROM USEPARAMS OBJECT
-    const {slug} = useParams();
+    const { slug } = useParams();
 
     // RETURN POST WITH SLUG MATCHING URL PARAM
     const post = posts.find(
         (p) => p.slug === slug
     );
 
-    if(!post) {
-        return <h2>Post not found</h2>
+    if (!post) {
+        return (
+            <div className="page">
+                <h2>Post not found</h2>
+            </div>
+        )
     }
 
     return (
-        <div>
-            <h2>{post.title}</h2>
-
-            <p>{post.content}</p>
+        <div className="page">
+            <div className="post">
+                <h2>{post.title}</h2>
+                
+                <p>{post.content}</p>
+            </div>
         </div>
     )
 }
